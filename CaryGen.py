@@ -63,10 +63,19 @@ USAGE
 
         # Process arguments
         print("Parsing...")
+        print(argv)
         args = parser.parse_args()
         
-        print("Starting up...")
-        w = CaryGenWeb(args.model, args.brand)
+        if args.brand is None:
+            parser.print_help()
+        elif args.model is None:
+            parser.print_help()
+        else:
+            print("Starting up...")
+            w = CaryGenWeb(args.brand, args.model)
+        
+            print("Scraping...")
+            w.scrape()
         
         return 0
     except KeyboardInterrupt:
@@ -82,9 +91,7 @@ USAGE
 
 if __name__ == "__main__":
     if DEBUG:
-        sys.argv.append("-h")
-        sys.argv.append("-v")
-        sys.argv.append("-r")
+        pass
     if TESTRUN:
         import doctest
         doctest.testmod()
