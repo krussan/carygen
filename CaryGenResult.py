@@ -1,7 +1,7 @@
 '''
 Created on Dec 10, 2017
 
-@author: vagrant
+@author: krussan
 '''
 
 class CaryGenResult(object):
