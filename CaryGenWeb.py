@@ -16,7 +16,7 @@ class CaryGenWeb(object):
     classdocs
     '''
 
-    BASE_URL='https://bilweb.se/sok/{}/{}?type=1&offset=0&limit=50'
+    BASE_URL='https://bilweb.se/sok/{}/{}?type=1&offset=0&limit=10000'
 
     def __init__(self, brand, model):
         self.brand = brand
