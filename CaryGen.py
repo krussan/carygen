@@ -75,7 +75,7 @@ USAGE
             w = CaryGenWeb(args.brand, args.model)
         
             print("Scraping...")
-            w.scrape()
+            res = w.scrape()
         
         return 0
     except KeyboardInterrupt:
